@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To-Do List</title>
+</head>
+
+<body style="margin:0; font-family:Segoe UI; background:linear-gradient(135deg,#36d1dc,#5b86e5); display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div style="background:white; width:500px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+
+<h2 style="text-align:center;">My To-Do List</h2>
+
+<div id="taskContainer">
+
+<div style="display:flex; justify-content:space-between; margin:15px 0;">
+<span class="task">Complete JavaScript Lab</span>
+<div>
+<button onclick="completeTask(this)" style="background:#28a745;color:white;border:none;padding:5px 10px;border-radius:6px;cursor:pointer;">Complete</button>
+<button onclick="removeTask(this)" style="background:#dc3545;color:white;border:none;padding:5px 10px;border-radius:6px;cursor:pointer;">Remove</button>
+</div>
+</div>
+
+<div style="display:flex; justify-content:space-between; margin:15px 0;">
+<span class="task">Push Code to GitHub</span>
+<div>
+<button onclick="completeTask(this)" style="background:#28a745;color:white;border:none;padding:5px 10px;border-radius:6px;">Complete</button>
+<button onclick="removeTask(this)" style="background:#dc3545;color:white;border:none;padding:5px 10px;border-radius:6px;">Remove</button>
+</div>
+</div>
+
+<div style="display:flex; justify-content:space-between; margin:15px 0;">
+<span class="task">Prepare PDF Submission</span>
+<div>
+<button onclick="completeTask(this)" style="background:#28a745;color:white;border:none;padding:5px 10px;border-radius:6px;">Complete</button>
+<button onclick="removeTask(this)" style="background:#dc3545;color:white;border:none;padding:5px 10px;border-radius:6px;">Remove</button>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function completeTask(btn){
+let taskText = btn.parentElement.parentElement.querySelector(".task");
+taskText.style.textDecoration = "line-through";
+taskText.style.color = "gray";
+
+let allTasks = document.querySelectorAll(".task");
+for(let i=0;i<allTasks.length;i++){
+allTasks[i].style.fontSize="18px";
+}
+}
+
+function removeTask(btn){
+btn.parentElement.parentElement.remove();
+}
+</script>
+
+</body>
+</html>

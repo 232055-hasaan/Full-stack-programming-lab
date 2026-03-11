@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Quiz</title>
+</head>
+
+<body style="margin:0; font-family:Segoe UI; background:linear-gradient(135deg,#667eea,#764ba2); display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div style="background:white; width:600px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+
+<h2 style="text-align:center; margin-bottom:20px;">JavaScript Interactive Quiz</h2>
+
+<form id="quizForm">
+
+<!-- Question 1 -->
+<p><strong>1. Which keyword declares a variable?</strong></p>
+<input type="radio" name="q1" value="var"> var <br>
+<input type="radio" name="q1" value="let"> let <br>
+<input type="radio" name="q1" value="const"> const <br><br>
+
+<!-- Question 2 -->
+<p><strong>2. What is 10 / 2 ?</strong></p>
+<input type="radio" name="q2" value="3"> 3 <br>
+<input type="radio" name="q2" value="5"> 5 <br>
+<input type="radio" name="q2" value="8"> 8 <br><br>
+
+<!-- Question 3 -->
+<p><strong>3. DOM stands for?</strong></p>
+<input type="radio" name="q3" value="Document Object Model"> Document Object Model <br>
+<input type="radio" name="q3" value="Data Object Management"> Data Object Management <br>
+<input type="radio" name="q3" value="Digital Ordinance Model"> Digital Ordinance Model <br><br>
+
+</form>
+
+<div style="text-align:center;">
+<button onclick="calculateScore()" 
+style="background:#667eea; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-size:16px;">Submit Quiz</button>
+
+<button onclick="resetQuiz()" 
+style="background:#ff4d4d; color:white; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-size:16px;">Reset</button>
+</div>
+
+<h3 id="result" style="text-align:center; margin-top:20px;"></h3>
+
+</div>
+
+<script>
+function calculateScore() {
+let score = 0;
+
+let q1 = document.querySelector('input[name="q1"]:checked');
+let q2 = document.querySelector('input[name="q2"]:checked');
+let q3 = document.querySelector('input[name="q3"]:checked');
+
+if(q1 && q1.value === "let") score++;
+if(q2 && q2.value === "5") score++;
+if(q3 && q3.value === "Document Object Model") score++;
+
+let result = document.getElementById("result");
+
+if(score === 3){
+result.style.color="green";
+result.innerHTML="Excellent! You scored 3/3 🎉";
+}
+else if(score === 2){
+result.style.color="orange";
+result.innerHTML="Good Job! You scored 2/3 👍";
+}
+else{
+result.style.color="red";
+result.innerHTML="Keep Practicing! You scored "+score+"/3 ❌";
+}
+}
+
+function resetQuiz(){
+document.getElementById("quizForm").reset();
+document.getElementById("result").innerHTML="";
+}
+</script>
+
+</body>
+</html>

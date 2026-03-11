@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Generator</title>
+</head>
+
+<body style="margin:0; font-family:Segoe UI; background:linear-gradient(135deg,#ff9a9e,#fad0c4); display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div style="background:white; width:600px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3); text-align:center;">
+
+<h2>Color Box Generator</h2>
+
+<input type="text" id="color1" placeholder="Enter Color 1 (e.g. red)"
+style="padding:8px; margin:5px; border-radius:6px; border:1px solid #ccc;">
+
+<input type="text" id="color2" placeholder="Enter Color 2"
+style="padding:8px; margin:5px; border-radius:6px; border:1px solid #ccc;">
+
+<input type="text" id="color3" placeholder="Enter Color 3"
+style="padding:8px; margin:5px; border-radius:6px; border:1px solid #ccc;">
+
+<br><br>
+
+<button onclick="addColors()" 
+style="background:#ff5e62;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;">Add Colors</button>
+
+<button onclick="clearBoxes()" 
+style="background:black;color:white;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;">Clear All</button>
+
+<div id="boxContainer" style="margin-top:20px;"></div>
+
+<p id="browserInfo" style="margin-top:20px;font-weight:bold;"></p>
+
+</div>
+
+<script>
+function createBox(color){
+if(color==="") return;
+
+let box=document.createElement("div");
+box.style.width="120px";
+box.style.height="120px";
+box.style.display="inline-block";
+box.style.margin="10px";
+box.style.borderRadius="12px";
+box.style.boxShadow="0 8px 15px rgba(0,0,0,0.2)";
+box.style.background=color;
+
+document.getElementById("boxContainer").appendChild(box);
+}
+
+function addColors(){
+createBox(color1.value);
+createBox(color2.value);
+createBox(color3.value);
+
+document.getElementById("browserInfo").innerHTML=
+"Window Size: "+window.innerWidth+" x "+window.innerHeight+
+"<br>Browser: "+navigator.userAgent;
+}
+
+function clearBoxes(){
+document.getElementById("boxContainer").innerHTML="";
+document.getElementById("browserInfo").innerHTML="";
+}
+</script>
+
+</body>
+</html>

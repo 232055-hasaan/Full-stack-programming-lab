@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 8 – Quiz Game</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="quiz-wrap">
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+      <div class="quiz-icon">🧠</div>
+      <h1>JavaScript Quiz</h1>
+      <p>Test your knowledge with 6 questions about JavaScript and web development.</p>
+      <button id="startBtn" class="primary-btn">Start Quiz →</button>
+    </div>
+
+    <!-- Question Screen -->
+    <div id="questionScreen" class="screen" style="display:none;">
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <div class="q-meta">
+        <span id="qNum">Question 1 of 6</span>
+        <span id="qScore">Score: 0</span>
+      </div>
+      <h2 id="questionText"></h2>
+      <div id="optionsWrap" class="options"></div>
+      <button id="nextBtn" class="primary-btn" style="display:none;">Next →</button>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="screen" style="display:none;">
+      <div id="scoreCircle" class="score-circle">
+        <span id="scoreNum">0</span>
+        <small>/ 6</small>
+      </div>
+      <h2 id="resultTitle"></h2>
+      <p id="resultMsg"></p>
+      <button id="retryBtn" class="primary-btn">Try Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

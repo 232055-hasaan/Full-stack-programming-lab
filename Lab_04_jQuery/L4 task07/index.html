@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 7 – Drag & Drop Sortable List</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Task Priority Board</h1>
+      <p class="subtitle">Drag & drop to reorder tasks by priority</p>
+    </header>
+
+    <ul id="sortableList">
+      <li class="sort-item" data-id="1"><span class="rank">1</span><span class="drag-icon">⠿</span><span class="item-label">Design new homepage layout</span><span class="tag design">Design</span></li>
+      <li class="sort-item" data-id="2"><span class="rank">2</span><span class="drag-icon">⠿</span><span class="item-label">Fix authentication bug</span><span class="tag dev">Dev</span></li>
+      <li class="sort-item" data-id="3"><span class="rank">3</span><span class="drag-icon">⠿</span><span class="item-label">Write API documentation</span><span class="tag docs">Docs</span></li>
+      <li class="sort-item" data-id="4"><span class="rank">4</span><span class="drag-icon">⠿</span><span class="item-label">Conduct user interviews</span><span class="tag research">Research</span></li>
+      <li class="sort-item" data-id="5"><span class="rank">5</span><span class="drag-icon">⠿</span><span class="item-label">Deploy to production</span><span class="tag dev">Dev</span></li>
+      <li class="sort-item" data-id="6"><span class="rank">6</span><span class="drag-icon">⠿</span><span class="item-label">Update privacy policy</span><span class="tag legal">Legal</span></li>
+    </ul>
+
+    <div class="order-display">
+      <h3>Current Order</h3>
+      <p id="orderText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

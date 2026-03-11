@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 1 – Dynamic List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Dynamic List Manager</h1>
+      <p class="subtitle">Add tasks, hover to highlight, click delete to remove</p>
+    </header>
+
+    <div class="input-row">
+      <input type="text" id="itemInput" placeholder="Enter a new item…" />
+      <button id="addBtn">+ Add</button>
+    </div>
+
+    <ul id="itemList">
+      <li class="list-item">
+        <span class="item-text">Sample item — hover me!</span>
+        <button class="delete-btn">✕</button>
+      </li>
+    </ul>
+
+    <p id="emptyMsg" style="display:none;">No items yet. Add one above!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

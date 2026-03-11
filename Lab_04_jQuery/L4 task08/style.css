@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(160deg, #1e0a3c 0%, #12062a 60%, #0a0420 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.quiz-wrap {
+  width: 100%;
+  max-width: 520px;
+}
+
+.screen { animation: screenIn 0.4s ease; }
+
+@keyframes screenIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Start */
+#startScreen { text-align: center; }
+.quiz-icon { font-size: 4rem; margin-bottom: 16px; }
+
+h1 {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+#startScreen p { color: rgba(255,255,255,0.55); font-size: 1rem; line-height: 1.7; margin-bottom: 32px; }
+
+/* Progress */
+.progress-bar {
+  height: 5px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+#progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+
+.q-meta {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 28px;
+  min-height: 72px;
+}
+
+.options { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+
+.option-btn {
+  background: rgba(255,255,255,0.06);
+  border: 2px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-size: 0.97rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.option-btn:hover:not(:disabled) {
+  background: rgba(167,139,250,0.15);
+  border-color: #a78bfa;
+  transform: translateX(4px);
+}
+
+.option-btn.correct {
+  background: rgba(52,211,153,0.2);
+  border-color: #34d399;
+  color: #34d399;
+}
+
+.option-btn.wrong {
+  background: rgba(248,113,113,0.2);
+  border-color: #f87171;
+  color: #f87171;
+}
+
+/* Buttons */
+.primary-btn {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 36px;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 8px 24px rgba(124,58,237,0.35);
+}
+
+.primary-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+/* Result */
+#resultScreen { text-align: center; }
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 0 40px rgba(124,58,237,0.5);
+  animation: popIn 0.5s cubic-bezier(0.34,1.56,0.64,1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+#scoreNum {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+}
+
+.score-circle small { color: rgba(255,255,255,0.6); font-size: 1rem; }
+
+#resultScreen h2 { font-size: 1.8rem; margin-bottom: 12px; color: #fff; }
+#resultScreen p { color: rgba(255,255,255,0.5); font-size: 0.95rem; margin-bottom: 32px; }

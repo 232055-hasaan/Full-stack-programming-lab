@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 2 – Animated Image Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Image Gallery</h1>
+      <p class="subtitle">Fade through curated photography</p>
+    </header>
+
+    <div class="gallery-wrap">
+      <div class="gallery-frame">
+        <img id="galleryImg" src="" alt="Gallery Image"/>
+        <div class="counter" id="counter"></div>
+      </div>
+      <div class="caption-box">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="prevBtn">← Prev</button>
+      <div class="dots" id="dots"></div>
+      <button id="nextBtn">Next →</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

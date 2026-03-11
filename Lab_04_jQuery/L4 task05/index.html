@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 5 – Chained Style Editor</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Chained Style Editor</h1>
+
+    <div class="text-block" id="styledText">
+      The quick brown fox jumps over the lazy dog. Style me using the controls below!
+    </div>
+
+    <div class="controls-panel">
+      <div class="control-group">
+        <h3>Font Size</h3>
+        <div class="btn-row">
+          <button class="ctrl-btn" id="sizeSmall">Small</button>
+          <button class="ctrl-btn" id="sizeMedium">Medium</button>
+          <button class="ctrl-btn" id="sizeLarge">Large</button>
+          <button class="ctrl-btn" id="sizeXL">XL</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Text Color</h3>
+        <div class="btn-row">
+          <button class="ctrl-btn color-btn" data-color="#ffffff" style="background:#444;color:#fff;">White</button>
+          <button class="ctrl-btn color-btn" data-color="#ff6b6b" style="background:#ff6b6b;color:#fff;">Red</button>
+          <button class="ctrl-btn color-btn" data-color="#51cf66" style="background:#51cf66;color:#fff;">Green</button>
+          <button class="ctrl-btn color-btn" data-color="#74c0fc" style="background:#74c0fc;color:#fff;">Blue</button>
+          <button class="ctrl-btn color-btn" data-color="#ffd43b" style="background:#ffd43b;color:#333;">Yellow</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Background</h3>
+        <div class="btn-row">
+          <button class="ctrl-btn bg-btn" data-bg="#1a1a2e" style="background:#1a1a2e;color:#fff;">Dark</button>
+          <button class="ctrl-btn bg-btn" data-bg="#fff8f0" style="background:#fff8f0;color:#333;">Warm</button>
+          <button class="ctrl-btn bg-btn" data-bg="#0d1b2a" style="background:#0d1b2a;color:#fff;">Navy</button>
+          <button class="ctrl-btn bg-btn" data-bg="#2d6a4f" style="background:#2d6a4f;color:#fff;">Forest</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <h3>Style Toggle</h3>
+        <div class="btn-row">
+          <button class="ctrl-btn toggle-btn" id="toggleBold">Bold</button>
+          <button class="ctrl-btn toggle-btn" id="toggleItalic">Italic</button>
+          <button class="ctrl-btn toggle-btn" id="toggleUnderline">Underline</button>
+          <button class="ctrl-btn toggle-btn" id="toggleShadow">Shadow</button>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <button class="ctrl-btn" id="resetAll" style="background:#ff4d6d22;color:#ff4d6d;border-color:#ff4d6d;">↺ Reset All</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

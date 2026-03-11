@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+
+<body style="margin:0; font-family:Segoe UI; background:linear-gradient(135deg,#11998e,#38ef7d); display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div style="background:white; width:450px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+
+<h2 style="text-align:center;">Registration Form</h2>
+
+<input type="text" id="name" placeholder="Full Name"
+style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;">
+
+<input type="text" id="email" placeholder="Email Address"
+style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;">
+
+<input type="number" id="age" placeholder="Age"
+style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;">
+
+<input type="password" id="password" placeholder="Password"
+style="width:100%; padding:10px; margin:8px 0; border-radius:8px; border:1px solid #ccc;">
+
+<button onclick="validateForm()" 
+style="width:100%; background:#11998e;color:white;border:none;padding:12px;border-radius:10px;font-size:16px;cursor:pointer;">
+Register
+</button>
+
+<p id="message" style="margin-top:15px;font-weight:bold;"></p>
+
+</div>
+
+<script>
+function showError(input, message){
+input.style.border="2px solid red";
+document.getElementById("message").style.color="red";
+document.getElementById("message").innerHTML=message;
+}
+
+function showSuccess(message){
+document.getElementById("message").style.color="green";
+document.getElementById("message").innerHTML=message;
+}
+
+function validateForm(){
+
+let name=document.getElementById("name");
+let email=document.getElementById("email");
+let age=document.getElementById("age");
+let password=document.getElementById("password");
+
+name.style.border="1px solid #ccc";
+email.style.border="1px solid #ccc";
+age.style.border="1px solid #ccc";
+password.style.border="1px solid #ccc";
+
+if(name.value.trim()===""){
+showError(name,"Name cannot be empty");
+return;
+}
+
+if(!email.value.includes("@")){
+showError(email,"Email must contain @");
+return;
+}
+
+if(age.value<18 || age.value>60){
+showError(age,"Age must be between 18 and 60");
+return;
+}
+
+if(password.value.length<6){
+showError(password,"Password must be at least 6 characters");
+return;
+}
+
+if(confirm("Are you sure you want to submit?")){
+alert("Welcome "+name.value+" 🎉");
+showSuccess("Registration Successful!");
+}
+}
+</script>
+
+</body>
+</html>

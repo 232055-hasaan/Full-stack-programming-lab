@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f0ede8;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.container { width: 100%; max-width: 600px; }
+
+header { margin-bottom: 32px; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1c1c1c;
+  letter-spacing: -0.5px;
+}
+
+.subtitle { color: #888; font-size: 0.9rem; margin-top: 5px; }
+
+#sortableList { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.sort-item {
+  background: #fff;
+  border: 2px solid #e8e3dc;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: grab;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+
+.sort-item:hover {
+  border-color: #c8b89a;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.sort-item.ui-sortable-helper {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  border-color: #ff6b35;
+  transform: rotate(1.5deg) scale(1.02);
+  cursor: grabbing;
+  background: #fffaf7;
+}
+
+.sort-item.ui-sortable-placeholder {
+  background: #f0ede8;
+  border: 2px dashed #d0c8bc;
+  border-radius: 12px;
+  visibility: visible !important;
+}
+
+.rank {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #bbb;
+  width: 18px;
+  flex-shrink: 0;
+}
+
+.drag-icon {
+  font-size: 1.2rem;
+  color: #ccc;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.item-label { flex: 1; font-weight: 500; color: #2a2a2a; font-size: 0.97rem; }
+
+.tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.tag.design   { background: #fce7f3; color: #be185d; }
+.tag.dev      { background: #e0f2fe; color: #0369a1; }
+.tag.docs     { background: #f0fdf4; color: #16a34a; }
+.tag.research { background: #fef9c3; color: #a16207; }
+.tag.legal    { background: #f5f3ff; color: #6d28d9; }
+
+.order-display {
+  margin-top: 28px;
+  background: #fff;
+  border: 1px solid #e8e3dc;
+  border-radius: 10px;
+  padding: 18px 20px;
+}
+
+.order-display h3 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: #aaa; margin-bottom: 8px; }
+#orderText { font-size: 0.85rem; color: #555; line-height: 1.7; }

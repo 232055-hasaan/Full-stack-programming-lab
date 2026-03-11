@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Data — JSON</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IBM+Plex+Mono:wght@400;500;600&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Decorative blobs -->
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-badge">// Lab Task 07</div>
+      <h1 class="site-title">Student Data<br /><em>using JSON</em></h1>
+      <p class="site-desc">
+        Practice <code>JSON.stringify()</code>, <code>JSON.parse()</code>,
+        destructuring &amp; <code>forEach</code> loops.
+      </p>
+    </div>
+  </header>
+
+  <!-- JSON Pipeline Steps -->
+  <section class="pipeline-section">
+    <div class="section-inner">
+      <h2 class="section-heading">JSON Pipeline</h2>
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="step-num">01</div>
+          <div class="step-icon">📦</div>
+          <div class="step-title">JS Objects</div>
+          <div class="step-desc">3 student objects created in JavaScript</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="step-num">02</div>
+          <div class="step-icon">🔡</div>
+          <div class="step-title">JSON.stringify()</div>
+          <div class="step-desc">Objects converted to JSON strings</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="step-num">03</div>
+          <div class="step-icon">🔄</div>
+          <div class="step-title">JSON.parse()</div>
+          <div class="step-desc">JSON strings parsed back to objects</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="step-num">04</div>
+          <div class="step-icon">💥</div>
+          <div class="step-title">Destructuring</div>
+          <div class="step-desc">Properties extracted from objects</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step active">
+          <div class="step-num">05</div>
+          <div class="step-icon">🖥</div>
+          <div class="step-title">Display</div>
+          <div class="step-desc">Rendered via innerHTML + forEach</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Student Cards Section -->
+  <section class="students-section">
+    <div class="section-inner">
+      <div class="students-header">
+        <h2 class="section-heading">Student Records</h2>
+        <span class="loop-badge">forEach loop</span>
+      </div>
+      <!-- Cards rendered by JS -->
+      <div class="students-grid" id="studentsGrid"></div>
+    </div>
+  </section>
+
+  <!-- JSON View Section -->
+  <section class="json-section">
+    <div class="section-inner">
+      <h2 class="section-heading">JSON Stringify Output</h2>
+      <p class="section-sub">Result of <code>JSON.stringify(students, null, 2)</code></p>
+      <pre class="json-block" id="jsonOutput"></pre>
+    </div>
+  </section>
+
+  <!-- Destructuring Demo -->
+  <section class="destruct-section">
+    <div class="section-inner">
+      <h2 class="section-heading">Destructuring Demo</h2>
+      <p class="section-sub">Extracted properties from each student using destructuring</p>
+      <div class="destruct-grid" id="destructGrid"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

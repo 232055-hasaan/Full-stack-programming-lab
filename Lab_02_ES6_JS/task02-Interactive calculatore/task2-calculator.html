@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Calculator</title>
+</head>
+
+<body style="margin:0; font-family:Segoe UI; background:linear-gradient(135deg,#ff9966,#ff5e62); display:flex; justify-content:center; align-items:center; height:100vh;">
+
+<div style="background:white; width:400px; padding:30px; border-radius:20px; box-shadow:0 20px 40px rgba(0,0,0,0.3); text-align:center;">
+
+<h2>Interactive Calculator</h2>
+
+<input type="number" id="num1" placeholder="Enter First Number" 
+style="width:90%; padding:10px; margin:10px; border-radius:8px; border:1px solid #ccc;">
+
+<input type="number" id="num2" placeholder="Enter Second Number"
+style="width:90%; padding:10px; margin:10px; border-radius:8px; border:1px solid #ccc;">
+
+<select id="operation" 
+style="width:95%; padding:10px; border-radius:8px;">
+<option value="+">Addition (+)</option>
+<option value="-">Subtraction (-)</option>
+<option value="*">Multiplication (×)</option>
+<option value="/">Division (÷)</option>
+</select>
+
+<br><br>
+
+<button onclick="calculate()"
+style="background:#ff5e62; color:white; border:none; padding:10px 20px; border-radius:10px; cursor:pointer;">
+Calculate
+</button>
+
+<h3 id="result" style="margin-top:20px; padding:10px; border-radius:8px;"></h3>
+
+</div>
+
+<script>
+function calculate(){
+
+let n1 = parseFloat(num1.value);
+let n2 = parseFloat(num2.value);
+let op = operation.value;
+let resultBox = document.getElementById("result");
+
+if(isNaN(n1) || isNaN(n2)){
+resultBox.innerHTML="Please enter valid numbers!";
+resultBox.style.background="#ffe0e0";
+return;
+}
+
+if(op === "/" && n2 === 0){
+resultBox.innerHTML="Cannot divide by zero!";
+resultBox.style.background="#ffe0e0";
+return;
+}
+
+let result;
+
+if(op === "+") result = n1 + n2;
+if(op === "-") result = n1 - n2;
+if(op === "*") result = n1 * n2;
+if(op === "/") result = n1 / n2;
+
+resultBox.innerHTML="Result: " + result;
+
+if(result >= 0){
+resultBox.style.background="#d4edda";
+}
+else{
+resultBox.style.background="#f8d7da";
+}
+}
+</script>
+
+</body>
+</html>

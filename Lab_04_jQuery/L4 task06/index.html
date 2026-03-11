@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 6 – API Data Fetcher</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Post Feed</h1>
+      <p class="subtitle">Fetching from JSONPlaceholder API</p>
+    </header>
+
+    <div class="controls">
+      <button class="tab-toggle active" data-type="posts">Posts</button>
+      <button class="tab-toggle" data-type="users">Users</button>
+    </div>
+
+    <div id="postList" class="post-list"></div>
+    <div id="loader" class="loader" style="display:none;"><div class="spinner"></div></div>
+    <div id="endMsg" style="display:none;" class="end-msg">All items loaded.</div>
+    <button id="loadMore">Load More</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

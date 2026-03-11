@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 4 – Tabbed Content</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <nav class="tab-nav" id="tabNav">
+    <button class="tab-btn active" data-target="overview">Overview</button>
+    <button class="tab-btn" data-target="features">Features</button>
+    <button class="tab-btn" data-target="pricing">Pricing</button>
+    <button class="tab-btn" data-target="faq">FAQ</button>
+    <button class="tab-btn" data-target="contact">Contact</button>
+  </nav>
+
+  <main>
+    <section class="tab-section" id="overview">
+      <h2>Overview</h2>
+      <p>Welcome to our platform — the all-in-one solution built for modern teams. Whether you're a startup or an enterprise, we scale with you. Streamline your workflows, collaborate in real time, and ship faster than ever before.</p>
+      <p>Trusted by <strong>50,000+</strong> teams worldwide across 120 countries.</p>
+    </section>
+
+    <section class="tab-section" id="features">
+      <h2>Features</h2>
+      <ul class="feature-list">
+        <li>⚡ Real-time collaboration with live cursors</li>
+        <li>🔒 End-to-end encryption for all data</li>
+        <li>📊 Advanced analytics dashboard</li>
+        <li>🔗 200+ integrations with popular tools</li>
+        <li>🤖 AI-powered smart suggestions</li>
+      </ul>
+    </section>
+
+    <section class="tab-section" id="pricing">
+      <h2>Pricing</h2>
+      <div class="pricing-cards">
+        <div class="price-card">
+          <h3>Starter</h3><span class="price">$0</span><p>Up to 5 members</p>
+        </div>
+        <div class="price-card highlight">
+          <h3>Pro</h3><span class="price">$12</span><p>Unlimited members</p>
+        </div>
+        <div class="price-card">
+          <h3>Enterprise</h3><span class="price">Custom</span><p>Dedicated support</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-section" id="faq">
+      <h2>FAQ</h2>
+      <div class="faq-item"><strong>Can I cancel anytime?</strong><p>Yes, cancel your subscription at any time with no hidden fees.</p></div>
+      <div class="faq-item"><strong>Is there a free trial?</strong><p>Yes! All paid plans come with a 14-day free trial.</p></div>
+      <div class="faq-item"><strong>Do you offer refunds?</strong><p>We offer a 30-day money-back guarantee on all plans.</p></div>
+    </section>
+
+    <section class="tab-section" id="contact">
+      <h2>Contact</h2>
+      <p>Have a question? Reach our friendly team anytime.</p>
+      <div class="contact-info">
+        <div>📧 <strong>hello@platform.io</strong></div>
+        <div>📞 <strong>+1 (800) 123-4567</strong></div>
+        <div>🕐 <strong>Mon–Fri, 9am–6pm EST</strong></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

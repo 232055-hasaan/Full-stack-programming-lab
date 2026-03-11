@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniPortal — Class + Map + Set + Promise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Stars -->
+  <div class="stars" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="portal-header">
+    <div class="header-wrap">
+      <div class="logo">
+        <div class="logo-icon">🎓</div>
+        <div>
+          <h1 class="logo-text">Uni<span>Portal</span></h1>
+          <p class="logo-sub">Class · Map · Set · Promise</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="hstat">
+          <span class="hstat-val" id="hStatStudents">0</span>
+          <span class="hstat-lbl">Students</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val" id="hStatCourses">0</span>
+          <span class="hstat-lbl">Courses</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-val" id="hStatSaved">0</span>
+          <span class="hstat-lbl">Saved</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="portal-main">
+
+    <!-- Left Column -->
+    <aside class="sidebar">
+
+      <!-- Add Student Form -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <span class="pcard-icon">🧑‍🎓</span>
+          <h2>Add Student</h2>
+          <span class="tag blue">Class</span>
+        </div>
+        <div class="pcard-body">
+          <div class="field">
+            <label>Student ID</label>
+            <input type="text" id="sId" placeholder="e.g. S001" />
+          </div>
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" id="sName" placeholder="Full name" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label>Age</label>
+              <input type="number" id="sAge" placeholder="20" min="15" max="60" />
+            </div>
+            <div class="field">
+              <label>Semester</label>
+              <select id="sSem">
+                <option>1st</option><option>2nd</option><option>3rd</option>
+                <option>4th</option><option>5th</option><option>6th</option>
+                <option>7th</option><option>8th</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Course Set Input -->
+          <div class="field">
+            <label>Courses <span class="tag purple">Set — no duplicates</span></label>
+            <div class="course-input-row">
+              <input type="text" id="courseField" placeholder="Add course…" />
+              <button class="icon-btn" id="addCourseBtn" title="Add course">+</button>
+            </div>
+            <div class="chips-container" id="coursesChips">
+              <span class="no-courses">No courses added yet</span>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" id="saveStudentBtn">
+            <span id="saveLabel">Save via Promise →</span>
+          </button>
+          <div id="saveToast" class="form-toast" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- Promise Log -->
+      <div class="pcard">
+        <div class="pcard-head">
+          <span class="pcard-icon">⚡</span>
+          <h2>Promise Log</h2>
+          <span class="tag green">Async</span>
+        </div>
+        <div class="pcard-body log-body" id="promiseLog">
+          <div class="log-empty">Awaiting actions…</div>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- Right Column: Student Registry -->
+    <section class="registry">
+      <div class="registry-head">
+        <h2>Student Registry</h2>
+        <span class="tag orange">Map&lt;ID, Student&gt;</span>
+        <button class="clear-btn" id="clearBtn">Clear All</button>
+      </div>
+      <div id="studentList" class="student-list">
+        <div class="registry-empty">
+          <div class="empty-icon">🎓</div>
+          <p>No students yet.<br />Add one using the form.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
