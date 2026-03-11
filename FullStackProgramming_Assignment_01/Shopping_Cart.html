@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart - HotSpring Portable Spas</title>
+<link rel="stylesheet" href="css/shared.css">
+<link rel="stylesheet" href="css/Shopping_Cart.css">
+</head>
+<body>
+<div class="top-bar"><div class="container"><span class="support">Call for Customer support: <span>020 38989565</span></span><div class="top-links"><a href="My_Account.html">My Account</a><a href="#">Wishlist</a><a href="Payment_Form.html">To Checkout</a></div></div></div>
+<header><div class="container"><div class="logo"><a href="Hottub_main_F.html" style="text-decoration:none"><h1>HOTSPRING<sup>®</sup><span>Portable Spas</span></h1></a></div><div class="cart-section"><div class="cart-box" onclick="location.href='Shopping_Cart.html'"><span class="cart-icon">🛒</span><span class="cart-text">My Cart: <span class="cart-count">0 Item(s)</span></span><span>▼</span></div></div></div></header>
+<nav><div class="container"><ul class="nav-links"><li><a href="Catagory_page.html">CATAGORY</a></li><li><span class="nav-divider">|</span></li><li><a href="#">BRAND</a></li><li><span class="nav-divider">|</span></li><li><a href="About_us.html">INFO</a></li></ul><div class="search-bar"><input type="text" placeholder="Search"><button>SEARCH</button></div></div></nav>
+
+<div class="page-wrapper">
+  <div class="container">
+    <div class="breadcrumb"><a href="Hottub_main_F.html">Home</a> <span>›</span> Shopping Cart</div>
+    <h1 class="page-title">Shopping Cart</h1>
+    <div class="content-box">
+      <h3 class="section-title">Your Shopping Cart</h3>
+      <div class="alert alert-success" id="cart-added-msg" style="display:none"></div>
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:#666;margin-bottom:8px">
+        <span>Items added: <a href="#">user_name</a></span>
+        <span>Items total</span>
+      </div>
+      <div id="cart-items">
+        <!-- Cart items rendered by JS -->
+        <div class="cart-item">
+          <div class="cart-item-img"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=80&h=60&fit=crop" alt=""></div>
+          <div class="cart-item-info">
+            <a href="Product_des.html" class="cart-item-name">The Cabaret 3 Person 41 Jet Hot Tub-110 Volt Plug in or 220 Volt Version</a>
+            <p class="cart-item-desc">220 V/50 AMP – 4.5KW Heater 110 V/15 AMP – 1KW Heater! convertible To 220 V / 6KW Heater</p>
+          </div>
+          <div class="cart-item-qty">
+            <label style="font-size:11px">Quantity: </label>
+            <select onchange="updateCartTotal()" class="qty-select"><option>1</option><option selected>10</option><option>20</option></select>
+            <p style="font-size:11px;color:#888;margin-top:3px">Standard (7 - 10 business days)</p>
+          </div>
+          <div class="cart-item-price">$9.00</div>
+          <div class="cart-item-actions"><a href="#" onclick="removeItem(this)">Remove</a> | <a href="Product_des.html">Edit Your Order</a></div>
+        </div>
+        <div class="cart-item">
+          <div class="cart-item-img"><img src="https://images.unsplash.com/photo-1572812426672-2f9e4b6cd44a?w=80&h=60&fit=crop" alt=""></div>
+          <div class="cart-item-info">
+            <a href="Product_des.html" class="cart-item-name">The Cabaret 3 Person 41 Jet Hot Tub-110 Volt Plug in or 220 Volt Version</a>
+            <p class="cart-item-desc">220 V/50 AMP – 4.5KW Heater 110 V/15 AMP – 1KW Heater! convertible To 220 V / 6KW Heater</p>
+          </div>
+          <div class="cart-item-qty">
+            <label style="font-size:11px">Quantity: </label>
+            <select onchange="updateCartTotal()" class="qty-select"><option>1</option><option selected>10</option><option>20</option></select>
+            <p style="font-size:11px;color:#888;margin-top:3px">Standard (7 - 10 business days)</p>
+          </div>
+          <div class="cart-item-price">$9.00</div>
+          <div class="cart-item-actions"><a href="#" onclick="removeItem(this)">Remove</a> | <a href="Product_des.html">Edit Your Order</a></div>
+        </div>
+      </div>
+      <div class="cart-summary">
+        <p>Cart summary (2 items)</p>
+        <p class="cart-total">Total: $21.00</p>
+        <div class="cart-actions">
+          <a href="Catagory_page.html" class="btn btn-outline">CONTINUE SHOPPING</a>
+          <a href="Payment_Form.html" class="btn btn-red">PROCEED TO CHECKOUT</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related-section">
+      <h3>Customers Who Viewed This Item Also</h3>
+      <div class="carousel-wrapper" id="cart-carousel" data-carousel>
+        <button class="carousel-btn carousel-prev">‹</button>
+        <div class="carousel-track">
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1572812426672-2f9e4b6cd44a?w=120&h=80&fit=crop" alt=""><div class="price">$2,549.15</div><p>Bosch 22 Cu. Ft Stainless Refrigerator<br><small>B22CS30SNS5</small></p></div>
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=120&h=80&fit=crop" alt=""><div class="price">$2,549.15</div><p>Bosch 22 Cu. Ft Stainless Refrigerator<br><small>B22CS30SNS5</small></p></div>
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=120&h=80&fit=crop" alt=""><div class="price">$2,549.15</div><p>Bosch 22 Cu. Ft Stainless Refrigerator<br><small>B22CS30SNS5</small></p></div>
+          <div class="carousel-item"><img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=120&h=80&fit=crop" alt=""><div class="price">$2,549.15</div><p>Bosch 22 Cu. Ft Stainless Refrigerator<br><small>B22CS30SNS5</small></p></div>
+        </div>
+        <button class="carousel-btn carousel-next">›</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="brands-bar"><div class="container"><div class="brand-item"><div class="brand-save"><span class="big">SAVE $1,000'S</span><br>ON THE TOP SPA BRANDS<br><b>HUGE DISCOUNTS</b></div></div><div class="brand-item"><span class="brand-name brand-oceanic">Oceanic<em>Spa</em></span></div><div class="brand-item"><span class="brand-name brand-caldera">Caldera<span style="color:#888">Spas</span></span></div><div class="brand-item"><span class="brand-name brand-island">Island<span style="color:#888">Spas</span></span></div></div></div>
+<footer><div class="container"><div class="footer-grid"><div class="footer-col"><h4>CONTACT US</h4><p>yoursitename.com<br>CALL 24/7: 888-201-8899<br>Your Address: Street<br>State &amp; Zip Code<br>Email: servicemail@yoursitename.com</p><div class="footer-social"><a href="#" class="s-tw">t</a><a href="#" class="s-fb">f</a><a href="#" class="s-li">in</a><a href="#" class="s-gp">g+</a><a href="#" class="s-yt">▶</a><a href="#" class="s-pi">P</a></div></div><div class="footer-col"><h4>INFORMATION</h4><ul><li><a href="About_us.html">ABOUT US</a></li><li><a href="Contact_us.html">CUSTOMER SERVICE</a></li><li><a href="#">PRIVACY POLICY</a></li><li><a href="#">SITE MAP</a></li></ul></div><div class="footer-col"><h4>MY ACCOUNT</h4><ul><li><a href="Login_page.html">SIGN IN</a></li><li><a href="Shopping_Cart.html">VIEW CART</a></li></ul></div><div class="footer-col"><h4>SIGNUP FOR A NEWS LETTER</h4><input type="email" class="newsletter-input" placeholder=""><div class="payment-icons"><span class="pay-icon pay-mc">MC</span><span class="pay-icon pay-am">AMEX</span><span class="pay-icon pay-vs">VISA</span><span class="pay-icon pay-pp">PayPal</span></div></div></div></div><div class="footer-bottom">© 2014 Hottubspaservice.com. All Rights Reserved.</div></footer>
+<script src="js/shared.js"></script>
+<script src="js/Shopping_Cart.js"></script>
+</body>
+</html>
